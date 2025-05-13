@@ -13,7 +13,7 @@ Music Video Generator with MOCAP data and DanceCamAnimator Code
 
 * you don't have to use /DCA_data in generation
 
-5. Move 'modisy_motion_json.py' to 'scripts/my_utils/'
+5. Move 'modify_motion_json.py' to 'scripts/my_utils/'
 6. IF you want to control minimum camrea keyframe distance, then change 'scripts/MusicDance2Keyframe.py' to given one
 
 7. Move My_data.sh to 'sh/' folder
@@ -26,10 +26,11 @@ sudo docker build -t dca .
 sudo docker run --shm-size=8G --gpus all --name dca -it -v /home/syj/DanceCamAnimator-Official:/workspace dca 
 sudo docker exec -it dca /bin/bash
 ```
-Then, generate virtual environment and install requiremtent file
+Then, generate virtual environment and install requiremtents.txt file
 
 ## Quick Start 
 
+Run 
 ```.bash
 bash My_data.sh
 ```
