@@ -1,0 +1,56 @@
+import bpy
+import csv
+import os
+
+# CSV 파일들이 있는 폴더 경로
+csv_folder_path = "C:/Users/shins/Desktop/GraduateSchool/.Project Dance/Dance20250213/m33_GlobalTransform.csv"
+
+# 기존 오브젝트 삭제
+
+
+# 프레임 설정
+bpy.context.scene.frame_start = 0
+
+# CSV 파일들 리스트
+csv_file = csv_folder_path
+
+# Joint 개수 (CSV 데이터에 따라 조정 필요)
+joint_count = None  # 초기화
+
+# 모든 CSV 파일에서 데이터 처리
+csv_path = os.path.join(csv_folder_path, csv_file)
+    
+    # CSV 파일 읽기
+with open(csv_path, newline='', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    data = list(reader)
+
+    # Joint 개수 설정 (첫 번째 CSV 파일에서만 설정)
+if joint_count is None:
+    joint_count = 51
+
+    # Joint 오브젝트 생성 (첫 번째 파일에서만 생성)
+if True:
+    joints = []
+    for j in range(joint_count):
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.03, location=(0, 0, 0))
+        obj = bpy.context.object
+        obj.name = f"Joint_{j}"
+        joints.append(obj)
+
+    # 애니메이션 적용	
+for frame in range(0, len(data) - 7, 4):  # 7번째 행부터 데이터 시작
+    for j, obj in enumerate(joints):
+        i = 2 + j * 7  # CSV에서 좌표 인덱스 계산 (380은 데이터 구조에 맞게 조정 필요)
+            
+            # 공백을 0으로 처리하는 코드
+        x = float(data[7 + frame][i + 4]) / 100 if data[7 + frame][i + 4] else 0
+        y = float(data[7 + frame][i + 5]) / 100 if data[7 + frame][i + 5] else 0
+        z = float(data[7 + frame][i + 6]) / 100 if data[7 + frame][i + 6] else 0
+            
+        x_rot = z * 0.117
+        y_rot = -x * 0.117
+        z_rot = y * 0.117
+
+        obj.location = (x_rot, y_rot, z_rot)
+        obj.keyframe_insert(data_path="location", frame=frame/4)
