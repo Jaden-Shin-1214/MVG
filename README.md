@@ -13,6 +13,8 @@ Music Video Generator with MOCAP data and DanceCamAnimator Code
 
 * you don't have to use /DCA_data in generation
 
+5. 
+
 ## Requirements
 Using dockerfile, implementation under codes
 
