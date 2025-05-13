@@ -4,12 +4,12 @@ Music Video Generator with MOCAP data and DanceCamAnimator Code
 ## Docker file
 Using dockerfile, implementation under codes
 
-'''.bash
+
+```.bash
 sudo docker build -t dca .
 sudo docker run --shm-size=8G --gpus all --name dca -it -v /home/syj/DanceCamAnimator-Official:/workspace dca 
 sudo docker exec -it dca /bin/bash
-'''
-
+```
 
 
 
