@@ -13,7 +13,10 @@ Music Video Generator with MOCAP data and DanceCamAnimator Code
 
 * you don't have to use /DCA_data in generation
 
-5. 
+5. Move 'modisy_motion_json.py' to 'scripts/my_utils/'
+6. IF you want to control minimum camrea keyframe distance, then change 'scripts/MusicDance2Keyframe.py' to given one
+
+7. Move My_data.sh to 'sh/' folder
 
 ## Requirements
 Using dockerfile, implementation under codes
