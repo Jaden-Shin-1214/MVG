@@ -6,12 +6,9 @@ Music Video Generator with MOCAP data and DanceCamAnimator Code
 
 1. Download camera generation model ckpt. from [https://github.com/Carmenw1203/DanceCamAnimator-Official] "DCA_stage1.pt" and "DCA_state_2n3.pt" and move to /checkpoints
 2. change your Optirack Motive motion capture file (.csv) name into m*_GlobalTransform.csv
-3. Also, change yout music file name into a*.mp3
-* Both music and csv file should have frames smaller than 1050
+3. Also, change yout music file name into a*.mp3 (Both music and csv file should have frames smaller than 1050)
 
-4. Move Motion Data and music data into 'My_original_data/MOCAP/input' and 'My_original_data/MUSIC'
-
-* you don't have to use /DCA_data in generation
+4. Move Motion Data and music data into 'My_original_data/MOCAP/input' and 'My_original_data/MUSIC' (you don't have to use /DCA_data in generation)
 
 5. Move 'modify_motion_json.py' to 'scripts/my_utils/'
 6. IF you want to control minimum camrea keyframe distance, then change 'scripts/MusicDance2Keyframe.py' to given one
