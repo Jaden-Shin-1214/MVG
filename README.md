@@ -36,10 +36,15 @@ Then MMD Camera Data will downloaded to 'My_output/test_DCA/etest/extend_vmd/'
 
 ## Setting Music Videos
 1. Background
-   you can use MMD background which compatiable in Blender. We used 'https://www.deviantart.com/birdaaa/art/MMD-x-Blender-The-First-Sound-Stage-Download-913660539' (thanks for BIRDAAA for making)
+
+you can use MMD background which compatiable in Blender. We used 'https://www.deviantart.com/birdaaa/art/MMD-x-Blender-The-First-Sound-Stage-Download-913660539' (thanks for BIRDAAA for making)
+
 2. Motion
-   Using file "CSV to Blender", write into Blender Scripts with file path
+   
+Using file "CSV to Blender", write into Blender Scripts with file path
+
 3. Camera
-   download Blender MMD add-on from [https://github.com/powroupi/blender_mmd_tools] and apply .vmd file to camera object
+   
+download Blender MMD add-on from [https://github.com/powroupi/blender_mmd_tools] and apply .vmd file to camera object
 
 
