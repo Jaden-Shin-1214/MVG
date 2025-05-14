@@ -1,6 +1,7 @@
 # MVG
 Music Video Generator with MOCAP data and DanceCamAnimator Code
-
+![Image](https://github.com/user-attachments/assets/630b49f8-93c2-4020-896b-ae51478f6652)
+![Image](https://github.com/user-attachments/assets/0e03fe33-0014-4b43-aa50-42f610905a65)
 
 ## Preparation
 
